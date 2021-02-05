@@ -1,0 +1,45 @@
+{
+  "name": "chartjs-plugin-waterfall",
+  "homepage": "http://www.chartjs.org",
+  "description": "Chart.js plugin for easy waterfall charts",
+  "version": "1.1.0",
+  "license": "MIT",
+  "main": "lib/chartjs-plugin-waterfall.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/everestate/chartjs-plugin-waterfall"
+  },
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "scripts": {
+    "bundle": "rollup -c",
+    "clean": "rimraf lib && rimraf dist",
+    "build": "npm-run-all clean bundle",
+    "version": "npm run build && git add -A dist"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "6",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "editorconfig": "^0.14.1",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "^7.3.0",
+    "npm-run-all": "^4.1.1",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-eslint": "^4.0.0",
+    "rollup-plugin-uglify": "^2.0.1"
+  },
+  "peerDependencies": {
+    "chart.js": ">= 2.0.0 < 3",
+    "lodash": "^4.16.4"
+  }
+}
